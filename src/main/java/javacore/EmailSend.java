@@ -1,3 +1,7 @@
+package javacore;
+
+import javaee.SinhVien;
+
 import javax.activation.DataHandler;
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
@@ -25,7 +29,9 @@ public class EmailSend {
         props.put("mail.smtp.port", " 995");
         Random s1 = new Random();
         System.out.println( s1.nextInt());
-
+        SinhVien sv = new SinhVien();
+        System.out.println( sv.setName("dfdsf"));
+        sv.getName()
         Session s = Session.getInstance(props, new Authenticator() {
             @Override
             protected PasswordAuthentication getPasswordAuthentication() {
